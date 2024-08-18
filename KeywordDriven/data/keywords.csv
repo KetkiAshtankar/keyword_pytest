@@ -1,0 +1,7 @@
+Keyword,Argument1,Argument2,Argument3
+open_browser,https://www.saucedemo.com,,
+login,standard_user,secret_sauce,
+add_item_to_cart,Sauce Labs Backpack,,
+go_to_cart,,,,
+checkout,John,Doe,12345
+finish_checkout,,,,
