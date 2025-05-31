@@ -2,11 +2,16 @@ import csv
 import pytest
 from tests.keywords import KeywordDriven
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
 
 
 @pytest.fixture(scope="module")
 def driver():
-    driver = webdriver.Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument("--incognito")  # Enable incognito mode
+
+    driver = webdriver.Chrome(options=chrome_options)
     yield driver
     driver.quit()
 
